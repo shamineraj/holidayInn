@@ -1,0 +1,83 @@
+﻿@model IEnumerable<HolidayInn.Models.Booking>
+
+@{
+    ViewBag.Title = "Check In List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<h2>Reserved In List</h2>
+<br />
+<div id="wrapper" style="float : right; margin-right:30px;" >
+    <button class="btn" onclick="location.href='@Url.Action("NewBooking", "Booking")' "> NEW Reservation</button>
+</div>
+
+<br />
+<br />
+
+<table class="table">
+    <tr>
+        <th>    @Html.DisplayNameFor(model => model.Status)  </th>
+        <th>     @Html.DisplayNameFor(model => model.Name) </th>
+        <th>    @Html.DisplayNameFor(model => model.PhoneNo) </th>
+        <th>  @Html.DisplayNameFor(model => model.Email) </th>
+
+        <th>  @Html.DisplayNameFor(model => model.Check_IN)     </th>
+        <th>   @Html.DisplayNameFor(model => model.Check_OUT)</th>
+
+        <th>     @Html.DisplayNameFor(model => model.Reseve_Date) </th>
+        <th>    @Html.DisplayNameFor(model => model.ResevedBY)   </th>
+
+        <th>   @Html.DisplayNameFor(model => model.NoOF_Adult) </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOF_Kids)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Check_IN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Check_OUT)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Reseve_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResevedBY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOF_Adult)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOF_Kids)
+            </td>
+
+            <td>
+                @Html.ActionLink("CheckedIN", "CheckedIN", new { id = item.Reseve_ID }) |
+               
+            </td>
+        </tr>
+    }
+
+</table>

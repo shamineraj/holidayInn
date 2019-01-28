@@ -1,0 +1,89 @@
+﻿@model IEnumerable<HolidayInn.Models.Booking>
+
+@{
+    ViewBag.Title = "CheckINList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Check In List</h2>
+<br />
+<div id="wrapper" style="float : right; margin-right:30px;">
+    <button class="btn" onclick="location.href='@Url.Action("NewBooking", "Booking")' "> NEW Reservation</button>
+</div>
+
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Room_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Check_IN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Check_OUT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOF_Adult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOF_Kids)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Room_No)
+            </td>        
+            <td>
+                @Html.DisplayFor(modelItem => item.Check_IN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Check_OUT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOF_Adult)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOF_Kids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            
+
+            <td>
+                @Html.ActionLink("CheckedOut", "CheckedOut", new { id = item.Reseve_ID }) 
+                @*@Html.ActionLink("Details", "Details", new { id = item.Reseve_ID }) |*@
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.Reseve_ID })*@
+            </td>
+        </tr>
+    }
+
+</table>

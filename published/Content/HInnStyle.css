@@ -1,0 +1,295 @@
+﻿body {
+    padding-bottom: 20px;
+    overflow: hidden;
+    background-color: #FCFCFC;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.hinnav {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+jumbotron {
+    width: 100% !important;
+    height:100% !important;
+    background-color: #FCFCFC;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    font-size: 20px !important;
+    font-family: "Times New Roman", Times, serif;
+    display: inline-block;
+    color: white !important;
+}
+
+/* NAVIGATION */
+nav {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #006622;
+    /*background: linear-gradient(#3b910a, deepskyblue);*/
+    /*background: linear-gradient(to bottom right, green, deepskyblue);*/
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    box-shadow: 1px 5px 1px #dedede;
+    font-family: "Times New Roman", Times, serif;
+    color: white !important;
+}
+
+nav ul {
+    list-style: none;
+    color: white;
+}
+
+    nav ul li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        color: white;
+    }
+
+        nav ul li a {
+            padding: 15px;
+            text-decoration: none;
+            color: white !important;
+            text-transform: uppercase;
+            font-size: 18px !important;
+            font-weight: bold;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+            nav ul li a,
+            nav ul li a:after,
+            nav ul li a:before {
+                transition: all .8s;
+            }
+
+
+/* SHIFT */
+nav.shift ul li a {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    border: none;
+    /*color: black !important;*/
+    text-align: center;
+    text-decoration: none;
+    margin-top: 25px;
+}
+
+nav.shift ul li :hover {
+    height: 40px;
+    color: black !important;
+    text-align: center;
+    /*padding: 10px 5px;*/
+}
+
+nav.shift ul li :after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1.2px;
+    content: '.';
+    color: transparent;
+    background: buttonface;
+    visibility: inherit;
+    opacity: 0;
+    z-index: -1;
+    /*border-radius: 1em;*/
+    /*border-radius: 30px*/
+    text-align: center;
+    padding-left: 100px;
+}
+
+nav.shit li a:hover:after {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: black;
+}
+
+nav.shift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.navbar-expand-md > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 765px) {
+    .navbar-expand-md > .container {
+        padding-left: 25px;
+        padding-right: 0;
+    }
+}
+
+
+.JobNav .btn {
+    display: inline-block;
+    margin: 1px 3px;
+}
+
+    .JobNav .btn :active {
+        background: linear-gradient(#3b910a, deepskyblue);
+        color: white;
+        cursor: crosshair;
+        font-size: 8px !important;
+    }
+
+NavJobEdit :active {
+    background-color: darkgreen;
+}
+
+.NavJobEdit {
+    margin: auto;
+    width: 100%;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
+}
+
+    .NavJobEdit nav {
+        height: 40px;
+        margin: 0 auto;
+        background-color: #cecece;
+        font-family: "Times New Roman", Times, serif;
+        color: white !important;
+        /*display: inline-block;*/
+        float: left;
+        margin-left: 40px;
+        margin-right: 40px;
+        box-shadow: none;
+    }
+
+        .NavJobEdit nav ul {
+            list-style: none;
+            color: white;
+        }
+
+            .NavJobEdit nav ul li {
+                width: 130px;
+                height: 38px;
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+                color: white;
+                /*border-right: double 2px #fff; /*add */
+                border-right: double 4px #006622;
+            }
+
+                .NavJobEdit nav ul li a {
+                    text-decoration: none;
+                    color: Black !important;
+                    text-transform: uppercase;
+                    font-size: 18px !important;
+                    font-weight: bold;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                    .NavJobEdit nav ul li a,
+                    .NavJobEdit nav ul li a:after,
+                    .NavJobEdit nav ul li a:before {
+                        transition: all .8s;
+                    }
+
+
+                .NavJobEdit nav ul li:hover {
+                    /*height: 38px;
+    color: black !important;
+    text-align: center;*/
+                    background: #559CAD !important;
+                }
+
+        .NavJobEdit nav.shift ul li:active :after {
+            background-color: darkorange;
+        }
+
+
+        .NavJobEdit nav.shit li a:hover:after {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 20px;
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            color: black;
+        }
+
+        .NavJobEdit nav.shift ul li a:hover:after {
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+
+
+#wrapper {
+    margin: auto;
+    width: 80%;
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: lightgrey;
+    padding: 15px;
+}
+
+    #wrapper .btn {
+        font-family: "Times New Roman", Times, serif;
+        height: 40px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px; /* Set a font size */
+        font-weight: bold;
+        background-color: #009933;
+        cursor: pointer; /* Mouse pointer on hover */
+        border: 1px solid gray;
+        color: black;
+        margin: 1px 3px;
+    }
+
+/*.active {
+    background: linear-gradient(#3b910a, deepskyblue);
+    color: white !important;
+}*/
+
+.bgimge {
+    background-image: url(../../../Images/nava.png);
+}
+
+.Dash {
+    background-image: url(../../../Images/dash.jpg);
+    width: 80%;
+    height: 480px;
+    margin: auto;
+    background-repeat: no-repeat;
+    border: 5px solid green;
+}
+
+/* *************************/

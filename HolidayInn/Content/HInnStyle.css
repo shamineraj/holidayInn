@@ -1,0 +1,209 @@
+﻿body {
+    padding-bottom: 170px;
+    /*overflow: hidden;*/
+    background-color: #FCFCFC;
+    font-family: "Times New Roman", Times, serif;
+    overflow-y: auto;
+}
+
+.hinnav {
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+jumbotron {
+    width: 100% !important;
+    height:100% !important;
+    background-color: #FCFCFC;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 765px) {
+    .navbar-expand-md > .container {
+        padding-left: 25px;
+        padding-right: 0;
+    }
+}
+
+
+
+    #wrapper .btn {
+        font-family: "Times New Roman", Times, serif;
+        height: 40px;
+       
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px; /* Set a font size */
+        font-weight: bold;
+        background-color: #499AB2;
+        cursor: pointer; /* Mouse pointer on hover */
+        color: black;
+    }
+    /* All Form Styling*/
+
+
+#CreateCase {
+    /*overflow: hidden;
+
+    border: 2px solid darkgray;*/
+    background-color: gainsboro;
+    height: 100%;
+    /*width: 67%*/
+}
+
+
+    #CreateCase fieldset:last-of-type {
+        margin-bottom: 0;
+    }
+
+    #CreateCase legend {
+        color: #448413;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 1px;
+        text-shadow: 0 1px 1px #c0d576;
+        padding-left: 10px;
+    }
+
+#ExtraInfo legend {
+    color: #448413;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 1px;
+    text-shadow: 0 1px 1px #c0d576;
+    padding-left: 10px;
+}
+
+
+#CreateCase fieldset fieldset legend {
+    color: black;
+    font-size: 13px;
+    font-weight: normal;
+    padding-bottom: 0;
+}
+
+#CreateCase ol li {
+    background: #b9cf6a;
+    background: rgba(255,255,255,.3);
+    border-color: #e3ebc3;
+    border-color: rgba(255,255,255,.6);
+    border-style: solid;
+    border-width: 2px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /*line-height: 17px;*/
+    list-style: none;
+    padding: 2px 6px;
+    margin-bottom: 1.5px;
+    width: 550px;
+    font-weight: bold;
+    color: black;
+}
+
+
+#CreateCase ol ol li {
+    background: none;
+    border: none;
+    float: left;
+}
+
+#CreateCase label {
+    font-family: "Times New Roman", Times, serif;
+    float: left;
+    font-size: 14px;
+    width: 180px;
+}
+
+#CreateCase fieldset fieldset label {
+    background: none no-repeat left 50%;
+    line-height: 20px;
+    padding: 0 0 0 30px;
+    width: auto;
+}
+
+    #CreateCase fieldset fieldset label:hover {
+        cursor: pointer;
+    }
+
+#CreateCase select,
+#CreateCase input:not([type=radio]) {
+    background: #ffffff;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: italic 13px Georgia, "Times New Roman", Times, serif;
+    outline: none;
+    padding: 5px;
+    width: 300px !important;
+    max-width: 340px !important;
+}
+
+#CreateCase textarea {
+    background: #ffffff;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: italic 13px Georgia, "Times New Roman", Times, serif;
+    outline: none;
+    padding: 5px;
+    width: 600px;
+    height: 300px;
+}
+
+
+
+input, select, textarea {
+    max-width: 540px !important;
+}
+
+#CreateCase select:focus,
+#CreateCase input:not([type=submit]):focus,
+#CreateCase textarea:focus {
+    background: #ffffff;
+    border: solid green;
+}
+
+#CreateCase input[type=radio] {
+    float: left;
+    margin-right: 5px;
+}
+
+#CreateCase button {
+    background: #499AB2;
+    border: none;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    display: block;
+    font: 18px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000;
+    text-transform: uppercase;
+}
+
+    #CreateCase button:hover {
+        background: #244d59;
+        cursor: pointer;
+    }
+
+.newbarder {
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #e78629;
+    padding: 15px;
+}

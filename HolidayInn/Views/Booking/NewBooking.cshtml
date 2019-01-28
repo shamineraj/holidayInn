@@ -1,0 +1,131 @@
+﻿@model HolidayInn.Models.Booking
+
+@{
+    ViewBag.Title = "NewBooking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript">
+    $(document).ready(function () {
+    $(function () {
+        $('.datepicker').datepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+    });
+
+</script>
+
+
+
+
+<div class="jumbotron" style="margin-top: 3px; height:100%; margin: auto;padding-top:10px; ">
+    <h2>New Booking</h2>
+
+    <div class="newbarder">
+
+    </div>
+
+    <br />
+
+    <div id="CreateCase">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            <fieldset>
+                <legend>CUSTOMER DETAILS</legend>
+                <ol>
+                    <li>
+                        <label>Customer Name</label>
+                        <input type="text" id="Name" name="Name" required="required" class="autofocus" />
+                        @Html.HiddenFor(modal => modal.Name, new { @id = "hdnname" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+                    </li>
+                    <li>
+                        <label>Telephone</label>
+                        <input type="text" id="PhoneNo" name="PhoneNo" required="required" class="autofocus" />
+                        @Html.ValidationMessageFor(model => model.PhoneNo, "", new { @class = "text-danger" })
+                    </li>
+                    <li>
+                        <label>Email </label>
+                        <input type="text" id="Email" name="Email" required="required" class="autofocus" />
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                    </li>
+                </ol>
+            </fieldset>
+
+            <fieldset>
+                <legend>BOOKING DETAILS</legend>
+                <ol>
+                    <li>
+                        <label>CheckIn Date</label>
+                        <input name="Check_IN"  id="Check_IN"  type="date" class=" datepicker form-control" required="required" />
+                        @Html.ValidationMessageFor(model => model.Check_IN, "", new { @class = "text-danger" })
+                    </li>
+                    <li>
+                        <label>Check-Out Date</label>
+                        <input name="Check_OUT"  id = "Check_OUT"   type="date" class=" datepicker  form-control" required="required" />
+                        @Html.ValidationMessageFor(model => model.Check_OUT, "", new { @class = "text-danger" })
+
+<li>
+                        <label>No Of Adult </label>
+                        <input type="text" id="NoOF_Adult" name="NoOF_Adult"  value = "2"  required="required" class="autofocus" />
+                        @Html.ValidationMessageFor(model => model.NoOF_Adult, "", new { @class = "text-danger" })
+
+                    </li>
+                    <li>
+                        <label>No Of Kids </label>
+                        <input type="text" id="NoOF_Kids" name="NoOF_Kids" value="0" required="required" class="autofocus" />
+                        @Html.ValidationMessageFor(model => model.NoOF_Kids, "", new { @class = "text-danger" })
+
+                    </li>
+                </ol>
+            </fieldset>
+
+
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @*<input type="submit" value="Create" class="btn btn-default" />*@
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+
+            </div>
+        }
+    </div>
+
+
+
+</div>
+
+
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqryUi")
+
+    @*<script type="text/javascript">
+
+
+
+            $(function () {
+                alert("Testing")
+                $(".date-picker").datepicker({
+                    dateFormat: 'dd-M-yy'
+                });
+            });
+        </script>*@
+
+
+
+}
